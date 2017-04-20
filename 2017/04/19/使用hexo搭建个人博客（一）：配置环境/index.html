@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/19/使用hexo搭建个人博客（一）：配置环境/index.html">
 <meta property="og:site_name" content="Dong's website">
 <meta property="og:description" content="技术要求： 开发：npm&amp;amp;hexo &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 熟悉几条命令即可 部署：git  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 最好掌握，git本身也是神器 博文编辑：markdown &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 会一点html会使布局更如意">
-<meta property="og:updated_time" content="2017-04-20T02:02:55.905Z">
+<meta property="og:updated_time" content="2017-04-20T02:52:48.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo搭建个人博客（一）：配置环境">
 <meta name="twitter:description" content="技术要求： 开发：npm&amp;amp;hexo &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 熟悉几条命令即可 部署：git  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 最好掌握，git本身也是神器 博文编辑：markdown &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 会一点html会使布局更如意">
@@ -177,19 +177,19 @@
 <p> 点击安装node.js</p>
 </li>
 <li><p>安装hexo</p>
-<p> npm install -g hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
 </li>
 <li><p>新建文件夹，在文件夹里面执行</p>
-<p> hexo init   #Hexo会自动在目标文件夹建立网站所需要的文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init   #Hexo会自动在目标文件夹建立网站所需要的文件</div></pre></td></tr></table></figure>
 </li>
 <li><p>初始化项目</p>
-<p> npm install</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
 </li>
 <li><p>生成静态页面</p>
-<p> hexo generate   #或者 hexo g</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate   #或者 hexo g</div></pre></td></tr></table></figure>
 </li>
 <li><p>启动本地服务，预览</p>
-<p> hexo server    #或者 hexo s<br> 在浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo server    #或者 hexo s</div><div class="line">在浏览器输入http://localhost:4000</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <h4 id="博文编辑"><a href="#博文编辑" class="headerlink" title="博文编辑"></a>博文编辑</h4><blockquote>
@@ -213,17 +213,12 @@
 <ol>
 <li>在你的github账户下新建repository，repository的名字要设为<strong>your_user_name.github.io</strong></li>
 <li><p>编辑 /hexo/_config.yml:</p>
-<pre><code>deploy:
-      type: github
-      repository: your_user_name.github.io仓库的地址
-      branch: master
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">	type: github</div><div class="line">	repository: your_user_name.github.io仓库的地址</div><div class="line">	branch: master</div></pre></td></tr></table></figure>
+</li>
 <li><p>执行命令</p>
 <blockquote>
 <p><a href="http://www.jianshu.com/p/9317a927e844" target="_blank" rel="external">提交前要配置好ssh</a>    </p>
-</blockquote>
-<p> hexo generate</p>
-<p> hexo deploy</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure></blockquote>
 </li>
 </ol>
 

@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>bb | Dong&#39;s website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mark and share something">
-<meta name="keywords">
+  <meta name="description" content="主工程文件结构123456789101112131415   .   ├── .deploy   #执行hexo deploy命令部署到GitHub上的内容目录   ├── public    #执行hexo generate命令，输出的静态网页内容目录   ├── scaffolds #layout模板文件目录，生成对应文件的模板   │       ├── draft.md  │		├── p">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bb">
 <meta property="og:url" content="http://yoursite.com/2017/04/20/使用hexo搭建个人博客（三）：目录结构以及每个文件的作用/index.html">
 <meta property="og:site_name" content="Dong's website">
-<meta property="og:description" content="mark and share something">
-<meta property="og:updated_time" content="2017-04-20T03:34:11.339Z">
+<meta property="og:description" content="主工程文件结构123456789101112131415   .   ├── .deploy   #执行hexo deploy命令部署到GitHub上的内容目录   ├── public    #执行hexo generate命令，输出的静态网页内容目录   ├── scaffolds #layout模板文件目录，生成对应文件的模板   │       ├── draft.md  │		├── p">
+<meta property="og:updated_time" content="2017-04-20T07:06:54.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bb">
-<meta name="twitter:description" content="mark and share something">
+<meta name="twitter:description" content="主工程文件结构123456789101112131415   .   ├── .deploy   #执行hexo deploy命令部署到GitHub上的内容目录   ├── public    #执行hexo generate命令，输出的静态网页内容目录   ├── scaffolds #layout模板文件目录，生成对应文件的模板   │       ├── draft.md  │		├── p">
   
     <link rel="alternative" href="/atom.xml" title="Dong&#39;s website" type="application/atom+xml">
   
@@ -166,7 +166,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="主工程文件结构"><a href="#主工程文件结构" class="headerlink" title="主工程文件结构"></a>主工程文件结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">   .</div><div class="line">   ├── .deploy   #执行hexo deploy命令部署到GitHub上的内容目录</div><div class="line">   ├── public    #执行hexo generate命令，输出的静态网页内容目录</div><div class="line">   ├── scaffolds #layout模板文件目录，生成对应文件的模板</div><div class="line">   │       ├── draft.md  </div><div class="line">│		├── page.md	  </div><div class="line">│		└── post.md	  </div><div class="line">   ├── scripts		#扩展脚本目录，这里可以自定义一些javascript脚本</div><div class="line">   ├── source		#博文源码目录</div><div class="line">   |   ├── _drafts</div><div class="line">   |   ├── _posts</div><div class="line">|	└── favicon.ico 这个是最终生成的博客网站的图标</div><div class="line">   ├── themes		#主题文件目录</div><div class="line">   ├── _config.yml	#全局配置文件</div><div class="line">   └── package.json	#npm配置文件</div></pre></td></tr></table></figure>
+<ul>
+<li><p>scaffolds下的模板使用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo new post xxx</div><div class="line">hexo new draft xxx</div><div class="line">hexo new page xxx</div><div class="line">也可以自己自定义模板，新建的文件则会保存到source/_post目录下</div></pre></td></tr></table></figure>
+</li>
+<li><p>source下面的文件</p>
+<p>  除 posts 文件夹之外，开头命名为 (下划线)的文件/ 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去 </p>
+</li>
+</ul>
+
       
 
       
@@ -195,7 +204,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/扩展技术/" class="article-tag-list-link color5">扩展技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 

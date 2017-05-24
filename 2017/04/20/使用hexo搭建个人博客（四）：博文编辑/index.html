@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/20/使用hexo搭建个人博客（四）：博文编辑/index.html">
 <meta property="og:site_name" content="Dong's website">
 <meta property="og:description" content="介绍编辑博文的一些基本参数">
-<meta property="og:updated_time" content="2017-04-20T07:26:32.351Z">
+<meta property="og:updated_time" content="2017-04-20T07:48:21.421Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo搭建个人博客（四）：博文编辑">
 <meta name="twitter:description" content="介绍编辑博文的一些基本参数">
@@ -167,6 +167,61 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>介绍编辑博文的一些基本参数<br><a id="more"></a></p>
+<p>在新建博文的时候，hexo会根据你的模板在source/_posts生成一个文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: new article</div><div class="line">date: time</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
+<p>文件的开头是属性，采用统一的yaml格式，用三条短横线分隔。下面是文章正文,支持markdown格式.</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>模板类型</td>
+<td>post</td>
+</tr>
+<tr>
+<td>title</td>
+<td>文章标题</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>创建日期</td>
+<td></td>
+</tr>
+<tr>
+<td>updated</td>
+<td>修改日期</td>
+<td></td>
+</tr>
+<tr>
+<td>comments</td>
+<td>是否开启评论</td>
+<td></td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类</td>
+<td></td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>url中的名字</td>
+<td>文件名</td>
+</tr>
+</tbody>
+</table>
+<p>在首页不想展示博文太多内容的时候可以使用<br>    <!--more--></p>
 
       
 
@@ -400,7 +455,55 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">activity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Broadcast</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">常用技术</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Cache</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Service</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Intent-filter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">对象持有</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">内部类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基本类型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内存优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">优秀资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
             <div class="clearfix"></div>

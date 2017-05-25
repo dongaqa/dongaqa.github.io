@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | Dong&#39;s website</title>
+  <title>Java（六）：注解上 | Dong&#39;s website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mark and share something">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dong's website">
-<meta property="og:url" content="http://yoursite.com/archives/2017/page/3/index.html">
+  <meta name="description" content="注解也被称为元数据，为我们在代码中添加信息，使我们可以在稍后某个时刻非常方便地使用这些数据。注解是Java SE5中引入的，作用简单地来说就是配置文件，使用自己的注解器解析属性出来，可以生成新的源文件也可以运行时数据。">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java（六）：注解上">
+<meta property="og:url" content="http://yoursite.com/2017/05/23/Java(六)：注解/index.html">
 <meta property="og:site_name" content="Dong's website">
-<meta property="og:description" content="mark and share something">
+<meta property="og:description" content="注解也被称为元数据，为我们在代码中添加信息，使我们可以在稍后某个时刻非常方便地使用这些数据。注解是Java SE5中引入的，作用简单地来说就是配置文件，使用自己的注解器解析属性出来，可以生成新的源文件也可以运行时数据。">
+<meta property="og:updated_time" content="2017-05-25T02:24:45.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dong's website">
-<meta name="twitter:description" content="mark and share something">
+<meta name="twitter:title" content="Java（六）：注解上">
+<meta name="twitter:description" content="注解也被称为元数据，为我们在代码中添加信息，使我们可以在稍后某个时刻非常方便地使用这些数据。注解是Java SE5中引入的，作用简单地来说就是配置文件，使用自己的注解器解析属性出来，可以生成新的源文件也可以运行时数据。">
   
     <link rel="alternative" href="/atom.xml" title="Dong&#39;s website" type="application/atom+xml">
   
@@ -144,271 +146,225 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java(六)：注解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java（六）：注解上
+    </h1>
+  
+
+        
+        <a href="/2017/05/23/Java(六)：注解/" class="archive-article-date">
+  	<time datetime="2017-05-23T03:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注解也被称为元数据，为我们在代码中添加信息，使我们可以在稍后某个时刻非常方便地使用这些数据。<br>注解是Java SE5中引入的，作用简单地来说就是配置文件，使用自己的注解器解析属性出来，可以生成新的源文件也可以运行时数据。</p>
+<a id="more"></a>
+<h3 id="注解有什么用"><a href="#注解有什么用" class="headerlink" title="注解有什么用"></a>注解有什么用</h3><ol>
+<li>生成文档。这是最常见的，也是java 最早提供的注解。常用的有@see @param @return 等；</li>
+<li>跟踪代码依赖性，实现替代配置文件功能。比较常见的是spring 2.5 开始的基于注解配置。作用就是减少配置。现在的框架基本都使用了这种配置来减少配置文件的数量；</li>
+<li>在编译时进行格式检查。如@Override放在方法前，如果你这个方法并不是覆盖了超类方法，则编译时就能检查出；</li>
+</ol>
+<h3 id="注解使用"><a href="#注解使用" class="headerlink" title="注解使用"></a>注解使用</h3><p>Java的注解在java.lang.annotation中，Java中常用的3种注解：</p>
+<ul>
+<li>@Override，表示当前方法定义将覆盖父类中的方法。如果当前被注解的方法在父类没找到编译器就会报错。</li>
+<li>@Deprecated，如果使用了这个注解的元素，编译器就会发出警告。</li>
+<li>@SuppressWarnings，关闭不当的编译器警告信息。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">protected void onStart() &#123;</div><div class="line">    super.onStart();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h4><p>元注解是用来创建注解用的，包括以下四种：</p>
+<ul>
+<li><p>@Documented 将此注解包含在Javadoc中。</p>
+</li>
+<li><p>@Target 表示该注解用于什么地方</p>
+<ul>
+<li>ElementType.TYPE:用于描述类、接口或enum声明</li>
+<li>ElementType.FIELD:用于描述实例变量</li>
+<li>ElementType.METHOD</li>
+<li>ElementType.PARAMETER</li>
+<li>ElementType.CONSTRUCTOR</li>
+<li>ElementType.LOCAL_VARIABLE</li>
+<li>ElementType.ANNOTATION_TYPE 另一个注释</li>
+<li>ElementType.PACKAGE 用于记录java文件的package信息</li>
+</ul>
+</li>
+<li><p>@Retention 定义该注解的生命周期</p>
+<ul>
+<li><p>RetentionPolicy.SOURCE – 在编译阶段丢弃。这些注解在编译结束之后就不再有任何意义，所以它们不会写入字节码。@Override, @SuppressWarnings都属于这类注解。</p>
+</li>
+<li><p>RetentionPolicy.CLASS – 在类加载的时候丢弃。在字节码文件的处理中有用。注解默认使用这种方式。</p>
+</li>
+<li><p>RetentionPolicy.RUNTIME– 始终不会丢弃，运行期也保留该注解，因此可以使用反射机制读取该注解的信息。我们自定义的注解通常使用这种方式。</p>
+</li>
+</ul>
+</li>
+<li><p>@Inherited 允许子类继承父类中的注解</p>
+</li>
+</ul>
+<h4 id="注解定义"><a href="#注解定义" class="headerlink" title="注解定义"></a>注解定义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@Target(ElementType.METHOD，ElementType.FIELD)  //如果没有这一行默认可以在所有元素使用</div><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">public @interface TestAnnotation &#123;</div><div class="line">    int id() default 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">public class A &#123;</div><div class="line">    @TestAnnotation(id = 3)</div><div class="line">    public void method()&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>自定义注解使用@interface，注解可以使用元注解配置。注释中所有的属性被定义成方法，并允许提供默认值。<br>如果注解中定义了名为value的元素，并且在使用该注解的时候，如果该元素是唯一需要赋值的一个元素，那么使用@TestAnnotation(3)这种方式。<br>属性不能有不确定的值，也就是说属性要么有默认值要么在使用时赋值且不能为null。<br>注解支持以下类型：</p>
+<ul>
+<li>基本类型</li>
+<li>String</li>
+<li>Class</li>
+<li>enun</li>
+<li>Annotation 注解嵌套</li>
+<li>以上类型的数组</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@Target(ElementType.METHOD)</div><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">public @interface TestAnnotation &#123;</div><div class="line">    int value() default 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">public class A &#123;</div><div class="line">    @TestAnnotation(3)</div><div class="line">    public void method()&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="注解处理"><a href="#注解处理" class="headerlink" title="注解处理"></a>注解处理</h4><p>注解处理需要使用到反射机制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Class a = A.class;</div><div class="line">for(Method method : a.getMethods()) &#123;</div><div class="line">	TestAnnotation testAnnotation = (TestAnnotation)method.getAnnotation(TestAnnotation.class);</div><div class="line">	if(testAnnotation != null) &#123;</div><div class="line">		System.out.println(&quot; Method Name : &quot; + method.getName());</div><div class="line">		System.out.println(&quot; id : &quot; + testAnnotation.id());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>下一遍将讲解apt以及如何怎样编写自己的注解处理器</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/20/使用hexo搭建个人博客（四）：博文编辑/" class="archive-article-date">
-  	<time datetime="2017-04-20T06:34:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/20/使用hexo搭建个人博客（四）：博文编辑/">使用hexo搭建个人博客（四）：博文编辑</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/扩展技术/" class="article-tag-list-link color5">扩展技术</a>
+        			<a href="/categories/注解/" class="article-tag-list-link color3">注解</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/23/Java(六)：注解/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/20/使用hexo搭建个人博客（三）：目录结构以及每个文件的作用/" class="archive-article-date">
-  	<time datetime="2017-04-20T03:34:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-20</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/20/使用hexo搭建个人博客（三）：目录结构以及每个文件的作用/">使用hexo搭建个人博客（三）：目录结构以及每个文件的作用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/扩展技术/" class="article-tag-list-link color5">扩展技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/19/使用hexo搭建个人博客（二）：配置文件/" class="archive-article-date">
-  	<time datetime="2017-04-19T11:20:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/19/使用hexo搭建个人博客（二）：配置文件/">使用hexo搭建个人博客（二）：配置文件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/扩展技术/" class="article-tag-list-link color5">扩展技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/19/使用hexo搭建个人博客（一）：配置环境/" class="archive-article-date">
-  	<time datetime="2017-04-19T09:20:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/19/使用hexo搭建个人博客（一）：配置环境/">使用hexo搭建个人博客（一）：配置环境</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/扩展技术/" class="article-tag-list-link color5">扩展技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/19/hexo/" class="archive-article-date">
-  	<time datetime="2017-04-19T08:05:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/19/hexo/">搭建自己的博客（Hexo + Github）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/扩展技术/" class="article-tag-list-link color5">扩展技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+    <a href="/2017/05/23/Java(五)：对象持有/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java(五)：对象持有
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/05/25/Java(七)：注解下/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java(七)：注解下</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><a class="page-number" href="/archives/2017/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
-  
+
 
 
           </div>
@@ -437,8 +393,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

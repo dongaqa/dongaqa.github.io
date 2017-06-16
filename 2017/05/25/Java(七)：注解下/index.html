@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Java(七)：注解下 | Dong&#39;s website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用反射会使运行的效率的变低，很多流行的注解框架已经考虑用编译注解来解决这个问题">
+  <meta name="description" content="使用反射会使运行的效率的变低，很多流行的注解框架已经考虑用编译注解来解决这个问题             http://blog.csdn.net/u011315960/article/details/64439575 http://blog.csdn.net/lily747/article/details/53641572 http://www.w2bc.com/article/229595">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java(七)：注解下">
 <meta property="og:url" content="http://yoursite.com/2017/05/25/Java(七)：注解下/index.html">
 <meta property="og:site_name" content="Dong's website">
-<meta property="og:description" content="使用反射会使运行的效率的变低，很多流行的注解框架已经考虑用编译注解来解决这个问题">
-<meta property="og:updated_time" content="2017-05-25T12:32:26.896Z">
+<meta property="og:description" content="使用反射会使运行的效率的变低，很多流行的注解框架已经考虑用编译注解来解决这个问题             http://blog.csdn.net/u011315960/article/details/64439575 http://blog.csdn.net/lily747/article/details/53641572 http://www.w2bc.com/article/229595">
+<meta property="og:updated_time" content="2017-06-06T08:57:57.367Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java(七)：注解下">
-<meta name="twitter:description" content="使用反射会使运行的效率的变低，很多流行的注解框架已经考虑用编译注解来解决这个问题">
+<meta name="twitter:description" content="使用反射会使运行的效率的变低，很多流行的注解框架已经考虑用编译注解来解决这个问题             http://blog.csdn.net/u011315960/article/details/64439575 http://blog.csdn.net/lily747/article/details/53641572 http://www.w2bc.com/article/229595">
   
     <link rel="alternative" href="/atom.xml" title="Dong&#39;s website" type="application/atom+xml">
   
@@ -167,8 +167,42 @@
     <div class="article-entry" itemprop="articleBody">
       
         <a id="more"></a>
-<p>使用反射会使运行的效率的变低，很多流行的注解框架已经考虑用编译注解来解决这个问题                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </p>
+<p>使用反射会使运行的效率的变低，很多流行的注解框架已经考虑用编译注解来解决这个问题           </p>
+<ul>
+<li><a href="http://blog.csdn.net/u011315960/article/details/64439575" target="_blank" rel="external">http://blog.csdn.net/u011315960/article/details/64439575</a></li>
+<li><a href="http://blog.csdn.net/lily747/article/details/53641572" target="_blank" rel="external">http://blog.csdn.net/lily747/article/details/53641572</a></li>
+<li><a href="http://www.w2bc.com/article/229595" target="_blank" rel="external">http://www.w2bc.com/article/229595</a></li>
+<li><a href="http://blog.csdn.net/industriously/article/details/53932425" target="_blank" rel="external">http://blog.csdn.net/industriously/article/details/53932425</a></li>
+<li><a href="http://blog.csdn.net/zhuhai__yizhi/article/details/51394810" target="_blank" rel="external">http://blog.csdn.net/zhuhai__yizhi/article/details/51394810</a></li>
+<li><a href="http://www.open-open.com/lib/view/open1423471786764.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1423471786764.html</a></li>
+<li><a href="http://blog.csdn.net/lmj623565791/article/details/43452969" target="_blank" rel="external">http://blog.csdn.net/lmj623565791/article/details/43452969</a></li>
+<li><a href="http://blog.csdn.net/wzgiceman/article/details/54580745" target="_blank" rel="external">http://blog.csdn.net/wzgiceman/article/details/54580745</a></li>
+<li><a href="http://www.2cto.com/kf/201608/536317.html" target="_blank" rel="external">http://www.2cto.com/kf/201608/536317.html</a></li>
+<li><a href="http://blog.csdn.net/crazy1235/article/details/51876192" target="_blank" rel="external">http://blog.csdn.net/crazy1235/article/details/51876192</a></li>
+</ul>
+<p>process(RoundEnvironment) -&gt; findAndParseTargets(RoundEnvironment) -&gt;<br>scanForRClasses(RoundEnvironment)</p>
+<h2 id="com-sun-source-util"><a href="#com-sun-source-util" class="headerlink" title="com.sun.source.util"></a>com.sun.source.util</h2><h3 id="Trees"><a href="#Trees" class="headerlink" title="Trees"></a>Trees</h3><p>//<a href="http://www.apihome.cn/api/java/ElementKind.html" target="_blank" rel="external">http://www.apihome.cn/api/java/ElementKind.html</a></p>
+<h2 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h2><pre><code>TypeMirror asType();   //返回此元素定义的类型
 
+ElementKind getKind();  // 返回此元素的类型
+
+Set&lt;Modifier&gt; getModifiers();   // 返回此元素的修饰符，不包括注释
+
+Name getSimpleName();   //返回此元素的简单（未限定）名称
+
+Element getEnclosingElement();        //返回封装此元素（非严格意义上）的最里层元素。上一层元素
+
+List&lt;? extends Element&gt; getEnclosedElements();   //返回此元素直接封装（非严格意义上）的元素，包含的元素集合
+
+boolean equals(Object var1);
+
+int hashCode();
+
+List&lt;? extends AnnotationMirror&gt; getAnnotationMirrors();  //返回直接存在于此元素上的注释
+&lt;A extends Annotation&gt; A getAnnotation(Class&lt;A&gt; var1);  //返回此元素针对指定类型的注释（如果存在这样的注释），否则返回 null。
+
+&lt;R, P&gt; R accept(ElementVisitor&lt;R, P&gt; var1, P var2);
+</code></pre>
       
 
       
@@ -293,6 +327,11 @@
     </a>
   
   
+    <a href="/2017/05/26/Java(八)：异常/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java(八)：异常</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
 </nav>
 
 
@@ -400,11 +439,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Broadcast</a>
+                <a href="javascript:void(0)" class="js-tag color3">Service</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Service</a>
+                <a href="javascript:void(0)" class="js-tag color1">Cache</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Broadcast</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -416,11 +459,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cache</a>
+                <a href="javascript:void(0)" class="js-tag color5">基本类型</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基本类型</a>
+                <a href="javascript:void(0)" class="js-tag color3">协议</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -428,11 +471,23 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">开源库源码解析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">对象持有</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内存优化</a>
+                <a href="javascript:void(0)" class="js-tag color4">UML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异常</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -440,11 +495,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">优秀资源</a>
+                <a href="javascript:void(0)" class="js-tag color5">内存优化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">优秀资源</a>
               </li>
             
             <div class="clearfix"></div>

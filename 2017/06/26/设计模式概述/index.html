@@ -6,17 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Dong&#39;s website</title>
+  <title>设计模式概述 | Dong&#39;s website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mark and share something">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dong's website">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="想当年刚写代码的时候管它什么鬼所有代码写到一个文件里面，功能实现了就很High。然后就是被说菜，看别人代码觉得很优雅，看第三方库就想发666的弹幕，于是也很想学这种操作。 其实我们自己写的代码中也用到了一些设计模式，像Callback、组合、代理等，其实设计模式就是从大家的代码里面总结而成的，然后规范化，总结他们的优缺点进而做了一些优化。如果大家遵循他的设计规则，你的代码也会很清晰容易被他人理解">
+<meta name="keywords" content="设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式概述">
+<meta property="og:url" content="http://yoursite.com/2017/06/26/设计模式概述/index.html">
 <meta property="og:site_name" content="Dong's website">
-<meta property="og:description" content="mark and share something">
+<meta property="og:description" content="想当年刚写代码的时候管它什么鬼所有代码写到一个文件里面，功能实现了就很High。然后就是被说菜，看别人代码觉得很优雅，看第三方库就想发666的弹幕，于是也很想学这种操作。 其实我们自己写的代码中也用到了一些设计模式，像Callback、组合、代理等，其实设计模式就是从大家的代码里面总结而成的，然后规范化，总结他们的优缺点进而做了一些优化。如果大家遵循他的设计规则，你的代码也会很清晰容易被他人理解">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1498477490592&di=e6912dac76631c066c4e5ecaa83c6a5a&imgtype=0&src=http%3A%2F%2Fru.all.biz%2Fimg%2Fru%2Fcatalog%2F1444317.jpeg">
+<meta property="og:image" content="http://oc7hxedwk.bkt.clouddn.com/1498477052%281%29.png">
+<meta property="og:image" content="http://img.my.csdn.net/uploads/201211/30/1354264672_7575.PNG">
+<meta property="og:updated_time" content="2017-06-26T12:10:44.982Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dong's website">
-<meta name="twitter:description" content="mark and share something">
+<meta name="twitter:title" content="设计模式概述">
+<meta name="twitter:description" content="想当年刚写代码的时候管它什么鬼所有代码写到一个文件里面，功能实现了就很High。然后就是被说菜，看别人代码觉得很优雅，看第三方库就想发666的弹幕，于是也很想学这种操作。 其实我们自己写的代码中也用到了一些设计模式，像Callback、组合、代理等，其实设计模式就是从大家的代码里面总结而成的，然后规范化，总结他们的优缺点进而做了一些优化。如果大家遵循他的设计规则，你的代码也会很清晰容易被他人理解">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1498477490592&di=e6912dac76631c066c4e5ecaa83c6a5a&imgtype=0&src=http%3A%2F%2Fru.all.biz%2Fimg%2Fru%2Fcatalog%2F1444317.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="Dong&#39;s website" type="application/atom+xml">
   
@@ -144,516 +150,191 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-设计模式概述" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      设计模式概述
+    </h1>
+  
+
+        
+        <a href="/2017/06/26/设计模式概述/" class="archive-article-date">
+  	<time datetime="2017-06-26T08:44:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-26</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1498477490592&di=e6912dac76631c066c4e5ecaa83c6a5a&imgtype=0&src=http%3A%2F%2Fru.all.biz%2Fimg%2Fru%2Fcatalog%2F1444317.jpeg" alt="pic" style="padding-left: 0%;padding-right: 0%"></p>
+<p>想当年刚写代码的时候管它什么鬼所有代码写到一个文件里面，功能实现了就很High。然后就是被说菜，看别人代码觉得很优雅，看第三方库就想发666的弹幕，于是也很想学这种操作。</p>
+<p>其实我们自己写的代码中也用到了一些设计模式，像Callback、组合、代理等，其实设计模式就是从大家的代码里面总结而成的，然后规范化，总结他们的优缺点进而做了一些优化。如果大家遵循他的设计规则，你的代码也会很清晰容易被他人理解。</p>
+<p>设计模式有23种，分为3大类创建型、结构型和行为型。下面会做个简单的概述，让大家有个整体的概念，方便理解和记忆，后面就会对每种设计模式做详细的讲解。</p>
+<a id="more"></a>
+<h2 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h2><ol>
+<li><p>工厂方法模式</p>
+<p> 工厂方法模式分为普通工厂模式和静态工厂模式。使用一个类提供专门对象的提供。</p>
+</li>
+<li><p>抽象工厂模式</p>
+<p> 抽象工厂模式是对工厂方法模式的扩展。如果工厂提供的对象有共同的基类，那么使用这么模式在新增加提供类的时候就不用改变工厂里面的代码。</p>
+</li>
+<li><p>单例模式</p>
+<p> 有些资源在应用里面是唯一的或者没有必要每次都创建，例如Application对象或者用户信息，应用中统一使用同一个对象，这么模式下需要考虑线程安全的问题。</p>
+</li>
+<li><p>建造者模式</p>
+<p> 相信大家都会遇到这种模式,是否记得那个AlterDialog.Builder，这种模式适用于创建对象需要传进许多配置参数时，放到构造函数里面会显得构造函数很长也要写多个构造函数。用这种模式解决这种问题同时函数式编程也会使代码很优雅。</p>
+</li>
+<li><p>原型模式</p>
+<p> 将一个对象作为原型，对其进行复制、克隆，产生一个和原对象类似的新对象</p>
+</li>
+</ol>
+<h2 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h2><p><img src="http://oc7hxedwk.bkt.clouddn.com/1498477052%281%29.png" alt="结构型模式简图"></p>
+<p>结构型模式可总结为上图所示，以对象的适配器模式为基础，不同的语义衍生出不同的模式。这些模式我们在开发中也经常遇到，例如ListView的Adapter，XXXProxy。这些模式能很好解耦代码，对代码的扩展提供接口，后面参照具体的例子理解其用法。结构型模式主要是扩展对象增加新的功能。</p>
+<h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h2><p><img src="http://img.my.csdn.net/uploads/201211/30/1354264672_7575.PNG" alt="行为型模式简图"></p>
+<p>结构型模式用于帮助系统间各对象的通信，以及如何控制复杂系统中流程。如果你看过Okhttp的源码，就会被他所用责任链模式所折服，将一个复杂的流程变成一条流水线，同时你也可以添加你的处理单元到这条流水线中，整体的代码模块化，非常清晰；RxJava使用了观察者模式，所以你大概了解了这种模式，对源码的理解有很大的帮助。</p>
+<p>所有的设计模式分类大概是这样，熟悉设计模式是非常重要的一步，特别是我们想写一些库的时候，“架构清晰、一扩展、容易使用”，当别人这样夸你的代码时是不是瞬间high起来。后面的文章将会具体讲解每种设计模式，敬请期待。</p>
+<p>你们的鼓励是我前进的脚步，望各位看客点个赞。同时如果你有分享，求互相关注。。。。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/23/Java(六)：注解/" class="archive-article-date">
-  	<time datetime="2017-05-23T03:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/23/Java(六)：注解/">Java（六）：注解上</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/注解/" class="article-tag-list-link color3">注解</a>
+        			<a href="/categories/设计模式/" class="article-tag-list-link color5">设计模式</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/26/设计模式概述/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/23/Java(五)：对象持有/" class="archive-article-date">
-  	<time datetime="2017-05-23T02:37:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-23</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/23/Java(五)：对象持有/">Java(五)：对象持有</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">对象持有</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/22/Java(四)：内部类/" class="archive-article-date">
-  	<time datetime="2017-05-22T01:30:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/22/Java(四)：内部类/">Java(四)：内部类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">内部类</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/11/Android缓存之内存缓存：LruCache/" class="archive-article-date">
-  	<time datetime="2017-05-11T02:54:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/11/Android缓存之内存缓存：LruCache/">Android缓存之内存缓存：LruCache</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Cache</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android常用技术/" class="article-tag-list-link color2">Android常用技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/10/Android缓存之存储目录/" class="archive-article-date">
-  	<time datetime="2017-05-10T11:06:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/10/Android缓存之存储目录/">Android缓存之存储目录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Cache</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android常用技术/" class="article-tag-list-link color2">Android常用技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/08/Android缓存概述/" class="archive-article-date">
-  	<time datetime="2017-05-08T03:08:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/08/Android缓存概述/">Android缓存概述</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Cache</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android常用技术/" class="article-tag-list-link color2">Android常用技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/06/Java的四种引用/" class="archive-article-date">
-  	<time datetime="2017-05-06T02:16:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/06/Java的四种引用/">Java的四种引用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">内存优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/05/Android之进程保活/" class="archive-article-date">
-  	<time datetime="2017-05-05T02:28:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/05/Android之进程保活/">Android之进程保活</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">常用技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/22/Java(三)：初始化与清理/" class="archive-article-date">
-  	<time datetime="2017-04-22T02:13:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/22/Java(三)：初始化与清理/">Java（三）：初始化与清理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基本类型</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/22/Java(二)：基本类型/" class="archive-article-date">
-  	<time datetime="2017-04-22T02:12:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/22/Java(二)：基本类型/">Java（二）：基本类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基本类型</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+    <a href="/2017/06/16/UML/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          UML
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
-  
+
 
 
           </div>
@@ -682,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

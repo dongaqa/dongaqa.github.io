@@ -841,19 +841,19 @@
 
 
   
-    <article id="post-Android之Activity" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Android之Service" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/22/Android之Activity/">Android之Activity</a>
+      <a class="article-title" href="/2017/04/22/Android之Service/">Android之Service</a>
     </h1>
   
 
         
-        <a href="/2017/04/22/Android之Activity/" class="archive-article-date">
+        <a href="/2017/04/22/Android之Service/" class="archive-article-date">
   	<time datetime="2017-04-22T02:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
 </a>
         
@@ -861,15 +861,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Activity一个应用程序的组件，它提供一个屏幕来与用户交互。</p>
-<p>从下面几个方面研究activity：</p>
-<ul>
-<li>生命周期</li>
-<li>状态保存</li>
-<li>task相关</li>
-</ul>
+        <p>Service是Android的组件之一。Service与Activity都是ContextWrapper扩展类，区别在于Service没有UI，所以Service一般用来处理运行后台的服务，例如后台音乐服务、后台下载服务，一般大厂会另外开启一个进程，在进程中开启一个服务接受推送信息或做进程保活。但Service也是运行在主线程的，Service和Thread的概念不一样，需要明确两者的区别，Service有利于程序架构更清晰。</p>
         
-          <a class="article-more-a" href="/2017/04/22/Android之Activity/#more">more >></a>
+          <a class="article-more-a" href="/2017/04/22/Android之Service/#more">more >></a>
         
       
 
@@ -883,7 +877,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">activity</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Service</a>
         		</li>
       		
 		</ul>
@@ -904,7 +898,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/22/Android之Activity/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/04/22/Android之Service/">展开全文 >></a>
         </p>
       
 
@@ -1018,15 +1012,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Service</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cache</a>
+                <a href="javascript:void(0)" class="js-tag color4">activity</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1034,15 +1024,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Intent-filter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常用技术</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基本类型</a>
+                <a href="javascript:void(0)" class="js-tag color1">Cache</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Intent-filter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1050,11 +1040,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">基本类型</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开源库源码解析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内存优化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1066,7 +1064,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">内部类</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1074,11 +1072,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">内部类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内存优化</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">

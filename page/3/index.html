@@ -146,157 +146,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Android之Broadcast" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/22/Android之Broadcast/">Android之Broadcast</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/22/Android之Broadcast/" class="archive-article-date">
-  	<time datetime="2017-04-22T02:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如果你注册了一个类型的广播，当对应类型广播发送的时候你就能监听到。<br>系统会在很多是时候发送一些特定的广播出来，例如，开机完成后会发出”android.intent.action.BOOT_COMPLETED”的广播；网络状态变化时发出”android.net.conn.CONNECTIVITY_CHANGE”的广播；电量变化时发出”android.intent.action.BATTERY_CHANGED”的广播…如果你想让一个应用开机启动，就可以监听对应的广播，当接收到广播的时候启动APP就行了。当然你也看自定义广播进行进程间或者进程内的消息传递</p>
-<p>BroadcastReceiver是Android四大组件之一，onReceive方法在主线程执行。<br>
-        
-          <a class="article-more-a" href="/2017/04/22/Android之Broadcast/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Broadcast</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/22/Android之Broadcast/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Android之Service" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/22/Android之Service/">Android之Service</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/22/Android之Service/" class="archive-article-date">
-  	<time datetime="2017-04-22T02:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Service是Android的组件之一。Service与Activity都是ContextWrapper扩展类，区别在于Service没有UI，所以Service一般用来处理运行后台的服务，例如后台音乐服务、后台下载服务，一般大厂会另外开启一个进程，在进程中开启一个服务接受推送信息或做进程保活。但Service也是运行在主线程的，Service和Thread的概念不一样，需要明确两者的区别，Service有利于程序架构更清晰。</p>
-        
-          <a class="article-more-a" href="/2017/04/22/Android之Service/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Service</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/22/Android之Service/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-Java(一)：概述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -352,6 +201,87 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/04/22/Java(一)：概述/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Android之Activity" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/Android之Activity/">Android之Activity</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/Android之Activity/" class="archive-article-date">
+  	<time datetime="2017-04-22T02:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Activity一个应用程序的组件，它提供一个屏幕来与用户交互。</p>
+<p>从下面几个方面研究activity：</p>
+<ul>
+<li>生命周期</li>
+<li>状态保存</li>
+<li>task相关</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/04/22/Android之Activity/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">activity</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/Android之Activity/">展开全文 >></a>
         </p>
       
 
@@ -427,6 +357,82 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/04/22/Android之Intent-filter/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Android之Broadcast" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/22/Android之Broadcast/">Android之Broadcast</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/22/Android之Broadcast/" class="archive-article-date">
+  	<time datetime="2017-04-22T02:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果你注册了一个类型的广播，当对应类型广播发送的时候你就能监听到。<br>系统会在很多是时候发送一些特定的广播出来，例如，开机完成后会发出”android.intent.action.BOOT_COMPLETED”的广播；网络状态变化时发出”android.net.conn.CONNECTIVITY_CHANGE”的广播；电量变化时发出”android.intent.action.BATTERY_CHANGED”的广播…如果你想让一个应用开机启动，就可以监听对应的广播，当接收到广播的时候启动APP就行了。当然你也看自定义广播进行进程间或者进程内的消息传递</p>
+<p>BroadcastReceiver是Android四大组件之一，onReceive方法在主线程执行。<br>
+        
+          <a class="article-more-a" href="/2017/04/22/Android之Broadcast/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Broadcast</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/22/Android之Broadcast/">展开全文 >></a>
         </p>
       
 
@@ -962,15 +968,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Service</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cache</a>
+                <a href="javascript:void(0)" class="js-tag color4">activity</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -978,15 +980,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Intent-filter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">常用技术</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基本类型</a>
+                <a href="javascript:void(0)" class="js-tag color1">Cache</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Intent-filter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -994,11 +996,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">基本类型</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开源库源码解析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内存优化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1010,7 +1020,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">内部类</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1018,11 +1028,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">内部类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内存优化</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
